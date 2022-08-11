@@ -8,7 +8,7 @@ jobs:
     - name: Build a Docker image
       run: |
         cd todolist-goof/
-        docker build -t jamiesmith/todo4 .
+        DOCKER_BUILDKIT=1 docker build -t jamiesmith/todo4 .
     - name: Run Snyk to check Docker image for vulnerabilities
       # Snyk can be used to break the build when it detects vulnerabilities.
       # In this case we want to upload the issues to GitHub Code Scanning
