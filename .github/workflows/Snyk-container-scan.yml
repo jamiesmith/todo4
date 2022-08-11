@@ -5,6 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    - name: Change to docker folder
+      run: cd todolist-goof
     - name: Build a Docker image
       run: docker build -t jamiesmith/todo4 .
     - name: Run Snyk to check Docker image for vulnerabilities
