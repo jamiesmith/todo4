@@ -1,0 +1,6 @@
+
+Ignore:
+  snyk-vulnid:
+    - path to library using > seperator :
+      reason: 'text string'
+      expires: 'datetime string'
