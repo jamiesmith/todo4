@@ -1,5 +1,9 @@
 name: Snyk Container
 on: push
+
+permissions:
+  contents: read
+  
 jobs:
   snyk_container_scan:
     runs-on: ubuntu-latest
