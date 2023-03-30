@@ -18,7 +18,7 @@ jobs:
       run: |
         cd todolist-goof/
         DOCKER_BUILDKIT=1 docker build -t jamiesmith/todo4 .
-    - name: Snyk Container Scan to check Docker image for base image policy and vulnerabilities
+    - name: Snyk Container Scan to validate base image against policy and check app vulns
       # Snyk can be used to break the build when it detects vulnerabilities.
       # In this case we want to upload the issues to GitHub Code Scanning
       continue-on-error: true
